@@ -10,7 +10,7 @@ Basic useful feature list:
 And here's some code! :+1:
 
 ```
-			ClientConfig clientConfig = new DefaultClientConfig();
+		ClientConfig clientConfig = new DefaultClientConfig();
 	        clientConfig.getFeatures().put(JSONConfiguration.FEATURE_POJO_MAPPING, Boolean.TRUE);
 	        Client client = Client.create(clientConfig);
 
@@ -19,8 +19,8 @@ And here's some code! :+1:
 	        ClientResponse response = webResourceGet.accept("application/json").get(ClientResponse.class);
 	    	String output = response.getEntity(String.class);
 	        
-			Type listType = new TypeToken<ResponseAllMissions>(){}.getType();
-			ResponseAllMissions responseAllMissions =new Gson().fromJson(output, listType);
+		Type listType = new TypeToken<ResponseAllMissions>(){}.getType();
+		ResponseAllMissions responseAllMissions =new Gson().fromJson(output, listType);
 ```
 
 This is [on GitHub](https://github.com/jbt/markdown-editor) so let me know if I've burked it somewhere.
